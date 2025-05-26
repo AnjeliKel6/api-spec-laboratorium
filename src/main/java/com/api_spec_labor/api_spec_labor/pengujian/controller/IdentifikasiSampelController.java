@@ -35,15 +35,6 @@ public class IdentifikasiSampelController {
         return ResponseEntity.ok(sampel);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<IdentifikasiSampel> updateSampel(@PathVariable Long id, @RequestBody IdentifikasiSampel sampel) {
-        if (!dataSampel.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        sampel.setId(id);
-        dataSampel.put(id, sampel);
-        return ResponseEntity.ok(sampel);
-    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSampel(@PathVariable Long id) {

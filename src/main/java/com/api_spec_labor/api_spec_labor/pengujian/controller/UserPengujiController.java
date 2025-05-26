@@ -35,22 +35,5 @@ public class UserPengujiController {
         return ResponseEntity.ok(penguji);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<UserPenguji> updatePenguji(@PathVariable Long id, @RequestBody UserPenguji penguji) {
-        if (!dataPenguji.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        penguji.setId(id);
-        dataPenguji.put(id, penguji);
-        return ResponseEntity.ok(penguji);
-    }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePenguji(@PathVariable Long id) {
-        if (!dataPenguji.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        dataPenguji.remove(id);
-        return ResponseEntity.noContent().build();
-    }
 }

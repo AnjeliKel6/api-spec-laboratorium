@@ -49,13 +49,4 @@ public class RoleController {
         return ResponseEntity.ok(updatedRole);
     }
 
-    // Delete role
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRole(@PathVariable Long id) {
-        if (!dataRole.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        dataRole.remove(id);
-        return ResponseEntity.noContent().build();
-    }
 }
