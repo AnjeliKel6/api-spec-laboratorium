@@ -2,7 +2,7 @@ package com.api_spec_labor.api_spec_labor.pengujian.model;
 
 
 
-public class ParameterUji {
+public class ParameterPengujian {
     private Long id;
 
     // Informasi Parameter Uji Pelanggan

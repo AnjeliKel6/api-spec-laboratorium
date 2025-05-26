@@ -12,7 +12,7 @@ public class DaftarSampelPengujian {
     private Long totalBiaya;
     private StatusPengujian status;
     private String namaPenguji;
-    private List<ParameterUji> parameterPengujian;
+    private List<ParameterPengujian> parameterPengujian;
 
     public Long getId() {
         return id;
@@ -62,11 +62,11 @@ public class DaftarSampelPengujian {
         this.namaPenguji = namaPenguji;
     }
 
-    public List<ParameterUji> getParameterPengujian() {
+    public List<ParameterPengujian> getParameterPengujian() {
         return parameterPengujian;
     }
 
-    public void setParameterPengujian(List<ParameterUji> parameterPengujian) {
+    public void setParameterPengujian(List<ParameterPengujian> parameterPengujian) {
         this.parameterPengujian = parameterPengujian;
     }
 }

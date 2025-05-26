@@ -1,6 +1,6 @@
 package com.api_spec_labor.api_spec_labor.pengujian.controller;
 
-import com.api_spec_labor.api_spec_labor.pengujian.model.ParameterUji;
+import com.api_spec_labor.api_spec_labor.pengujian.model.ParameterPengujian;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,18 +10,18 @@ import java.util.*;
 @RequestMapping("/api/parameter-uji")
 @CrossOrigin
 
-public class ParameterUjiController {
-    private Map<Long, ParameterUji> dataParameterUji = new HashMap<>();
+public class ParameterPengujianController {
+    private Map<Long, ParameterPengujian> dataParameterUji = new HashMap<>();
     private Long counter = 1L;
 
     @GetMapping("/")
-    public ResponseEntity<List<ParameterUji>> getAllParameterUji() {
+    public ResponseEntity<List<ParameterPengujian>> getAllParameterUji() {
         return ResponseEntity.ok(new ArrayList<>(dataParameterUji.values()));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ParameterUji> getParameterUjiById(@PathVariable Long id) {
-        ParameterUji parameter = dataParameterUji.get(id);
+    public ResponseEntity<ParameterPengujian> getParameterUjiById(@PathVariable Long id) {
+        ParameterPengujian parameter = dataParameterUji.get(id);
         if (parameter != null) {
             return ResponseEntity.ok(parameter);
         }
@@ -29,14 +29,14 @@ public class ParameterUjiController {
     }
 
     @PostMapping
-    public ResponseEntity<ParameterUji> addParameterUji(@RequestBody ParameterUji parameter) {
+    public ResponseEntity<ParameterPengujian> addParameterUji(@RequestBody ParameterPengujian parameter) {
         parameter.setId(counter++);
         dataParameterUji.put(parameter.getId(), parameter);
         return ResponseEntity.ok(parameter);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ParameterUji> updateParameterUji(@PathVariable Long id, @RequestBody ParameterUji parameter) {
+    public ResponseEntity<ParameterPengujian> updateParameterUji(@PathVariable Long id, @RequestBody ParameterPengujian parameter) {
         if (!dataParameterUji.containsKey(id)) {
             return ResponseEntity.notFound().build();
         }
