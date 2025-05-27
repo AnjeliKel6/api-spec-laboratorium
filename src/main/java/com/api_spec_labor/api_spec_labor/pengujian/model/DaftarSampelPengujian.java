@@ -6,7 +6,7 @@ import java.util.List;
 public class DaftarSampelPengujian {
     private Long id;
 
-    // Informasi Pelanggan
+    // Daftar Sampel Yang Akan di Uji
     private String noSampel;
     private LocalDate tanggalPenerimaanSampel;
     private Long totalBiaya;

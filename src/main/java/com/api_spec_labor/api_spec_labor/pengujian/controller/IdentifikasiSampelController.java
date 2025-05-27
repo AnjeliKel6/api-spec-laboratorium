@@ -35,13 +35,4 @@ public class IdentifikasiSampelController {
         return ResponseEntity.ok(sampel);
     }
 
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteSampel(@PathVariable Long id) {
-        if (!dataSampel.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        dataSampel.remove(id);
-        return ResponseEntity.noContent().build();
-    }
 }

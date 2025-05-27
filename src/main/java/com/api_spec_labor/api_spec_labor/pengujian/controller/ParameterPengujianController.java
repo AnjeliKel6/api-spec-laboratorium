@@ -35,15 +35,6 @@ public class ParameterPengujianController {
         return ResponseEntity.ok(parameter);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ParameterPengujian> updateParameterUji(@PathVariable Long id, @RequestBody ParameterPengujian parameter) {
-        if (!dataParameterUji.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        parameter.setId(id);
-        dataParameterUji.put(id, parameter);
-        return ResponseEntity.ok(parameter);
-    }
 
 
 }

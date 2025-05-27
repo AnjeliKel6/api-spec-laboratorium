@@ -2,7 +2,7 @@ package com.api_spec_labor.api_spec_labor.pengujian.model;
 
 import java.time.LocalDate;
 
-public class pelanggan {
+public class IdentifikasiPelanggan {
     private Long id;
 
     // Informasi Pelanggan

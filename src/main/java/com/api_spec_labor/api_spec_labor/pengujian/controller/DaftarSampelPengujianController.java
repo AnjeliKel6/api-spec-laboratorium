@@ -37,15 +37,6 @@ public class DaftarSampelPengujianController {
         return ResponseEntity.ok(sampel);
     }
 
-    // PUT (Update data)
-    @PutMapping("/{id}")
-    public ResponseEntity<DaftarSampelPengujian> updateSampel(@PathVariable Long id, @RequestBody DaftarSampelPengujian updated) {
-        if (!dataSampel.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        updated.setId(id);
-        dataSampel.put(id, updated);
-        return ResponseEntity.ok(updated);
-    }
+
 
 }
