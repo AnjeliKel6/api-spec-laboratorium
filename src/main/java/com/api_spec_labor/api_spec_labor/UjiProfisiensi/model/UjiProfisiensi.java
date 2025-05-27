@@ -9,7 +9,7 @@ public class UjiProfisiensi {
     private String metodeUji;
     private LocalDate tanggalUji;
     private String namaPenyelenggara;
-    private List<ParameterUji> parameterUjiList;
+    private List<ParameterUjiProfisiensi> parameterUjiProfisiensiList;
 
     public Long getId() {
         return id;
@@ -51,11 +51,11 @@ public class UjiProfisiensi {
         this.namaPenyelenggara = namaPenyelenggara;
     }
 
-    public List<ParameterUji> getParameterUjiList() {
-        return parameterUjiList;
+    public List<ParameterUjiProfisiensi> getParameterUjiList() {
+        return parameterUjiProfisiensiList;
     }
 
-    public void setParameterUjiList(List<ParameterUji> parameterUjiList) {
-        this.parameterUjiList = parameterUjiList;
+    public void setParameterUjiList(List<ParameterUjiProfisiensi> parameterUjiProfisiensiList) {
+        this.parameterUjiProfisiensiList = parameterUjiProfisiensiList;
     }
 }

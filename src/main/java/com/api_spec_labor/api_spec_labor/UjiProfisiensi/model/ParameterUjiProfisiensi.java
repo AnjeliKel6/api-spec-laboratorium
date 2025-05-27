@@ -1,12 +1,21 @@
 package com.api_spec_labor.api_spec_labor.UjiProfisiensi.model;
 
-public class ParameterUji {
+public class ParameterUjiProfisiensi {
+    private Long id;
     private String parameterUji;
     private String satuan;
     private Double pengulangan1;
     private Double pengulangan2;
     private Double ketidakpastian;
     private String metode;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getParameterUji() {
         return parameterUji;

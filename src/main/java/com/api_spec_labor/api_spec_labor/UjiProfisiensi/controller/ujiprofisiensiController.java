@@ -38,15 +38,7 @@ public class ujiprofisiensiController {
         return ResponseEntity.ok(uji);
     }
 
-    // DELETE by ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUjiProfisiensi(@PathVariable Long id) {
-        if (!ujiProfisiensiData.containsKey(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        ujiProfisiensiData.remove(id);
-        return ResponseEntity.noContent().build();
-    }
+
 }
 
 
