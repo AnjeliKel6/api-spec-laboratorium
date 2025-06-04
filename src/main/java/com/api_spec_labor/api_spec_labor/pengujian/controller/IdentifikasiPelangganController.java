@@ -1,6 +1,8 @@
 package com.api_spec_labor.api_spec_labor.pengujian.controller;
 
 import com.api_spec_labor.api_spec_labor.pengujian.model.IdentifikasiPelanggan;
+import com.api_spec_labor.api_spec_labor.pengujian.model.PermintaanPengujianReq;
+import com.api_spec_labor.api_spec_labor.share.BaseResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,10 +31,8 @@ public class IdentifikasiPelangganController {
     }
 
     @PostMapping
-    public ResponseEntity<IdentifikasiPelanggan> addPelanggan(@RequestBody IdentifikasiPelanggan identifikasiPelangganData) {
-        identifikasiPelangganData.setId(counter++);
-        dataPelanggan.put(identifikasiPelangganData.getId(), identifikasiPelangganData);
-        return ResponseEntity.ok(identifikasiPelangganData);
+    public BaseResponse addPelanggan(@RequestBody PermintaanPengujianReq permintaanPengujianReqData) {
+        return new BaseResponse(1);
     }
 
 

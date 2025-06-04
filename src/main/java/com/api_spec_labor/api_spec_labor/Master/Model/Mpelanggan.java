@@ -1,15 +1,13 @@
-package com.api_spec_labor.api_spec_labor.pengujian.model;
+package com.api_spec_labor.api_spec_labor.Master.Model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
-public class IdentifikasiPelanggan {
-    private Long id;
-
-    // Informasi Pelanggan
+@Builder
+public class Mpelanggan {
     private String namaPelanggan;
     private String npwpAtauKtp;
     private LocalDate tanggalPenerimaanSampel;
@@ -17,6 +15,4 @@ public class IdentifikasiPelanggan {
     private String alamatPelanggan;
     private String teknikSampling;
     private String satuanAcuan;
-
-
 }
