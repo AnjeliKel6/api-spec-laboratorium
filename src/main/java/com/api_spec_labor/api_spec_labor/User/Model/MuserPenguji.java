@@ -1,4 +1,4 @@
-package com.api_spec_labor.api_spec_labor.Master.Model;
+package com.api_spec_labor.api_spec_labor.User.Model;
 
 import lombok.Builder;
 import lombok.Data;
